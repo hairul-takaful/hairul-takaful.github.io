@@ -102,7 +102,6 @@ p {
     background-color: transparent;
     color: #00897b; /* Medium teal */
     border: 2px solid #00897b;
-    /* Removed margin-left here as 'gap' on parent will handle spacing */
 }
 
 .btn-secondary:hover {
@@ -167,8 +166,8 @@ header nav ul li a:hover {
     color: #00897b;
 }
 
-/* Hero Section Specifics */
-#hero {
+/* Hero Section Specifics (for Homepage and other hero sections) */
+.hero-section { /* Added .hero-section for common styles */
     background-color: #f0f8f8; /* Light background for hero */
     padding: 100px 0;
     display: flex;
@@ -176,25 +175,25 @@ header nav ul li a:hover {
     min-height: 600px; /* Ensures hero section has a decent height */
 }
 
-#hero .container {
+.hero-section .container { /* Changed #hero .container to .hero-section .container */
     display: flex;
     flex-wrap: wrap; /* Allows wrapping on smaller screens */
     align-items: center;
     gap: 40px; /* Space between content and image */
 }
 
-#hero .hero-content {
+.hero-section .hero-content { /* Changed #hero .hero-content to .hero-section .hero-content */
     flex: 2; /* Takes more space */
     min-width: 300px; /* Prevents squishing */
 }
 
-#hero .hero-image {
+.hero-section .hero-image { /* Changed #hero .hero-image to .hero-section .hero-image */
     flex: 1; /* Takes less space */
     min-width: 250px; /* Prevents squishing */
     text-align: center;
 }
 
-#hero .hero-image img {
+.hero-section .hero-image img { /* Changed #hero .hero-image img to .hero-section .hero-image img */
     max-width: 100%;
     height: auto;
     border-radius: 8px; /* Slightly rounded corners for images */
@@ -209,7 +208,7 @@ header nav ul li a:hover {
     justify-content: flex-start; /* Aligns buttons to the start on larger screens */
 }
 
-/* Services Grid */
+/* Services Grid (Homepage) */
 .services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -245,7 +244,7 @@ header nav ul li a:hover {
     margin-bottom: 15px;
 }
 
-/* Promise Points Grid */
+/* Promise Points Grid (Homepage) */
 .promise-points {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -266,6 +265,134 @@ header nav ul li a:hover {
     font-size: 1.2em;
     margin-bottom: 8px;
 }
+
+/* --- NEW STYLES FOR FAMILY TAKAFUL ADVISORY PAGE --- */
+
+/* General grid styling for benefits and approach sections */
+.benefits-grid,
+.approach-points {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* 300px min width for items */
+    gap: 30px; /* Space between grid items */
+    margin-top: 40px;
+    text-align: left; /* Default text alignment for these grids */
+}
+
+.benefit-item,
+.approach-item {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    padding: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.benefit-item:hover,
+.approach-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+}
+
+.benefit-item h3,
+.approach-item h3 {
+    color: #00695c; /* Darker teal for headings */
+    margin-bottom: 10px;
+    font-size: 1.3em;
+}
+
+/* FAQ Styling */
+.faq-items {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Space between FAQ items */
+}
+
+.faq-item {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 1px 8px rgba(0,0,0,0.05);
+    padding: 20px;
+    border-left: 5px solid #00897b; /* Accent border on the left */
+}
+
+.faq-item summary {
+    font-weight: 600;
+    color: #004d40; /* Dark teal for question */
+    cursor: pointer;
+    padding: 5px 0;
+    list-style: none; /* Hide default browser arrow */
+    position: relative;
+}
+
+/* Custom arrow for FAQ summary */
+.faq-item summary::-webkit-details-marker {
+    display: none; /* Hide default marker for webkit browsers */
+}
+
+.faq-item summary::after {
+    content: '+'; /* Plus sign for closed state */
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5em;
+    color: #00897b; /* Teal color for the icon */
+    transition: transform 0.2s ease;
+}
+
+.faq-item[open] summary::after {
+    content: '-'; /* Minus sign for open state */
+    transform: translateY(-50%) rotate(0deg); /* No rotation needed for simple minus */
+}
+
+.faq-item p {
+    margin-top: 15px;
+    margin-bottom: 0;
+    line-height: 1.8;
+    color: #555; /* Slightly lighter text for answers */
+}
+
+/* Testimonials Styling (Simple Stack) */
+.testimonials-carousel { /* Using carousel name, but simple stack for now */
+    display: flex;
+    flex-direction: column; /* Stack testimonials vertically */
+    gap: 30px; /* Space between testimonials */
+    margin-top: 40px;
+}
+
+.testimonial-item {
+    background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent white on dark background */
+    border-radius: 8px;
+    padding: 30px;
+    text-align: center;
+}
+
+.testimonial-item .quote {
+    font-size: 1.3em;
+    font-style: italic;
+    margin-bottom: 15px;
+    color: #ffffff;
+    line-height: 1.5;
+}
+
+.testimonial-item .source {
+    font-weight: 600;
+    color: #e0f2f1; /* Lighter color for source */
+}
+
+/* Final CTA Buttons Section */
+.cta-buttons {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px; /* Consistent gap with hero-ctas */
+    justify-content: center; /* Center buttons horizontally */
+}
+
 
 /* Footer */
 footer {
@@ -308,15 +435,15 @@ footer .footer-links li a:hover {
     .section-padded {
         padding: 60px 0;
     }
-    #hero .container {
+    .hero-section .container { /* Targeting common hero section */
         flex-direction: column;
         text-align: center;
     }
-    #hero .hero-image {
+    .hero-section .hero-image { /* Targeting common hero section */
         order: -1; /* Puts image above text on small screens */
         margin-bottom: 30px;
     }
-    #hero .hero-ctas {
+    .hero-ctas {
         flex-direction: column; /* Stack vertically */
         align-items: center; /* Center items when stacked */
         gap: 20px; /* Consistent vertical gap on smaller screens */
@@ -343,8 +470,38 @@ footer .footer-links li a:hover {
     .sub-headline {
         font-size: 1.2em;
     }
-    .services-grid, .promise-points {
-        grid-template-columns: 1fr; /* Single column layout */
+    .services-grid,
+    .promise-points,
+    .benefits-grid, /* New */
+    .approach-points /* New */
+    {
+        grid-template-columns: 1fr; /* Single column layout for all grids */
+    }
+
+    .benefit-item, /* New */
+    .approach-item, /* New */
+    .faq-item, /* New */
+    .testimonial-item /* New */
+    {
+        padding: 20px;
+    }
+
+    .faq-item summary { /* New */
+        font-size: 1em;
+    }
+
+    .faq-item p { /* New */
+        font-size: 0.95em;
+    }
+
+    .testimonial-item .quote { /* New */
+        font-size: 1.1em;
+    }
+
+    .cta-buttons { /* New */
+        flex-direction: column; /* Stack buttons vertically */
+        align-items: center; /* Center stacked buttons */
+        gap: 15px; /* Adjust vertical gap */
     }
 }
 
@@ -356,11 +513,9 @@ footer .footer-links li a:hover {
         width: 100%;
         margin-bottom: 10px; /* Stack buttons vertically */
     }
-    .btn-secondary {
-        margin-left: 0; /* Ensure no extra left margin if stacked */
-    }
-    .hero-ctas {
+    /* Hero CTAs already handled by 992px media query */
+    /* .hero-ctas {
         flex-direction: column;
-        gap: 20px; /* Keep consistent vertical gap */
-    }
+        gap: 20px;
+    } */
 }
