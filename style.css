@@ -317,12 +317,9 @@ footer .footer-links li a:hover {
         margin-bottom: 30px;
     }
     #hero .hero-ctas {
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-    }
-    .btn-secondary {
-        margin-left: 0;
+        flex-direction: column; /* Stack vertically */
+        align-items: center; /* Center items when stacked */
+        gap: 20px; /* Consistent vertical gap on smaller screens */
     }
 }
 
@@ -360,10 +357,10 @@ footer .footer-links li a:hover {
         margin-bottom: 10px; /* Stack buttons vertically */
     }
     .btn-secondary {
-        margin-left: 0;
+        margin-left: 0; /* Ensure no extra left margin if stacked */
     }
     .hero-ctas {
         flex-direction: column;
-        gap: 10px;
+        gap: 20px; /* Keep consistent vertical gap */
     }
 }
