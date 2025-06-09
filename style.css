@@ -102,7 +102,7 @@ p {
     background-color: transparent;
     color: #00897b; /* Medium teal */
     border: 2px solid #00897b;
-    margin-left: 15px;
+    /* Removed margin-left here as 'gap' on parent will handle spacing */
 }
 
 .btn-secondary:hover {
@@ -203,6 +203,10 @@ header nav ul li a:hover {
 
 .hero-ctas {
     margin-top: 30px;
+    display: flex; /* Make it a flex container */
+    flex-wrap: wrap; /* Allow items to wrap to the next line if space runs out */
+    gap: 25px; /* Increased consistent gap between buttons (horizontal and vertical) */
+    justify-content: flex-start; /* Aligns buttons to the start on larger screens */
 }
 
 /* Services Grid */
