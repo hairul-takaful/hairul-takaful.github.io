@@ -359,4 +359,175 @@ header nav ul li a:hover {
 .faq-item p {
     margin-top: 15px;
     margin-bottom: 0;
-    line-height
+    line-height: 1.8;
+    color: #555; /* Slightly lighter text for answers */
+}
+
+/* Testimonials Styling (Simple Stack) */
+.testimonials-carousel { /* Using carousel name, but simple stack for now */
+    display: flex;
+    flex-direction: column; /* Stack testimonials vertically */
+    gap: 30px; /* Space between testimonials */
+    margin-top: 40px;
+}
+
+.testimonial-item {
+    background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent white on dark background */
+    border-radius: 8px;
+    padding: 30px;
+    text-align: center;
+}
+
+.testimonial-item .quote {
+    font-size: 1.3em;
+    font-style: italic;
+    margin-bottom: 15px;
+    color: #ffffff;
+    line-height: 1.5;
+}
+
+.testimonial-item .source {
+    font-weight: 600;
+    color: #e0f2f1; /* Lighter color for source */
+}
+
+/* Final CTA Buttons Section */
+.cta-buttons {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px; /* Consistent gap with hero-ctas */
+    justify-content: center; /* Center buttons horizontally */
+}
+
+
+/* Footer */
+footer {
+    background-color: #222;
+    color: #f4f4f4;
+    padding: 40px 0;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+footer .footer-links {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+}
+
+footer .footer-links li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+footer .footer-links li a {
+    color: #f4f4f4;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer .footer-links li a:hover {
+    color: #00897b;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    h1 {
+        font-size: 2.4em;
+    }
+    h2 {
+        font-size: 1.8em;
+    }
+    .section-padded {
+        padding: 60px 0;
+    }
+    .hero-section .container { /* Targeting common hero section */
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero-section .hero-image { /* Targeting common hero section */
+        order: -1; /* Puts image above text on small screens */
+        margin-bottom: 30px;
+    }
+    .hero-ctas {
+        flex-direction: column; /* Stack vertically */
+        align-items: center; /* Center items when stacked */
+        gap: 20px; /* Consistent vertical gap on smaller screens */
+    }
+
+    /* Adjust H1 size for hero on medium screens */
+    .hero-section .hero-content h1 {
+        font-size: 2.8em; /* Match the general h1 for smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    header nav ul {
+        margin-top: 15px;
+    }
+    header nav ul li {
+        margin: 0 10px;
+    }
+    h1 {
+        font-size: 2em;
+    }
+    h2 {
+        font-size: 1.6em;
+    }
+    .sub-headline {
+        font-size: 1.2em;
+    }
+    .services-grid,
+    .promise-points,
+    .benefits-grid, /* New */
+    .approach-points /* New */
+    {
+        grid-template-columns: 1fr; /* Single column layout for all grids */
+    }
+
+    .benefit-item, /* New */
+    .approach-item, /* New */
+    .faq-item, /* New */
+    .testimonial-item /* New */
+    {
+        padding: 20px;
+    }
+
+    .faq-item summary { /* New */
+        font-size: 1em;
+    }
+
+    .faq-item p { /* New */
+        font-size: 0.95em;
+    }
+
+    .testimonial-item .quote { /* New */
+        font-size: 1.1em;
+    }
+
+    .cta-buttons { /* New */
+        flex-direction: column; /* Stack buttons vertically */
+        align-items: center; /* Center stacked buttons */
+        gap: 15px; /* Adjust vertical gap */
+    }
+
+    /* Adjust H1 size for hero on small screens */
+    .hero-section .hero-content h1 {
+        font-size: 2.2em; /* Even smaller for very small screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 15px;
+    }
+    .btn {
+        width: 100%;
+        margin-bottom: 10px; /* Stack buttons vertically */
+    }
+}
