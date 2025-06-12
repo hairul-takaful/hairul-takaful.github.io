@@ -157,6 +157,7 @@ header .container {
 
 header .logo img {
     max-height: 55px; /* Slightly larger logo if desired */
+    width: auto;
 }
 
 header nav ul {
