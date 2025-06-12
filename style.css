@@ -1,3 +1,6 @@
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
 /* General Resets & Basic Styling */
 * {
     margin: 0;
@@ -6,7 +9,7 @@
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Noto Sans', sans-serif; /* Changed to Noto Sans */
     line-height: 1.7; /* Slightly more line-height for readability */
     color: #4A4A4A; /* Softer dark gray for body text */
     background-color: #ffffff; /* Pure white background for the whole site */
@@ -20,7 +23,7 @@ body {
 
 /* Typography */
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Noto Sans', sans-serif; /* Changed to Noto Sans */
     color: #212121; /* Darker, more neutral black for main headings */
     margin-bottom: 0.8em;
     line-height: 1.2;
@@ -452,6 +455,9 @@ footer .footer-links li a:hover {
     }
     h2 {
         font-size: 2em;
+    }
+    .sub-headline {
+        font-size: 1.2em;
     }
     .section-padded {
         padding: 80px 0;
