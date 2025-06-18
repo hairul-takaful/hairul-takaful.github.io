@@ -3,135 +3,161 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hairul Family Takaful Kota Tinggi - Your Financial Compass</title>
-    <meta name="description" content="Guiding young Muslim professionals and families in Kota Tinggi to Shariah-compliant prosperity and protection, empowering them with clarity against financial scams.">
-    
-    <link rel="stylesheet" href="style.css"> 
-    
-    </head>
+    <title>Hairul Family Takaful Kota Tinggi | Sharia-Compliant Financial Planning</title>
+    <meta name="description" content="Ethical wealth management with Family Takaful and Halal Unit Trusts. Serving Kota Tinggi and Malaysia.">
+    <style>
+        /* ===== MINIMALIST STYLES ===== */
+        :root {
+            --navy: #0F2C59;
+            --teal: #008080;
+            --gold: #D4AF37;
+            --light: #F5F5F5;
+        }
+        body {
+            font-family: 'Lato', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            color: #333;
+            background: white;
+        }
+        header {
+            background: var(--navy);
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: var(--gold);
+        }
+        .hero {
+            background: var(--light);
+            padding: 4rem 1rem;
+            text-align: center;
+        }
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+        }
+        .cta-button {
+            background: var(--teal);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 4px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 1rem;
+            transition: background 0.3s;
+        }
+        .cta-button:hover {
+            background: var(--gold);
+        }
+        .services {
+            display: flex;
+            gap: 20px;
+            padding: 2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .service-card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        footer {
+            background: var(--navy);
+            color: white;
+            text-align: center;
+            padding: 1.5rem 0;
+            margin-top: 2rem;
+        }
+        /* WhatsApp Float */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 100;
+        }
+    </style>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <!-- Feather Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
 <body>
-
+    <!-- ===== HEADER ===== -->
     <header>
-        <div class="container">
-            <div class="logo">
-               <a href="index.html">
-                    <img src="images/hairul-family-takaful-logo.svg" alt="Hairul Family Takaful Kota Tinggi Logo">
-                </a>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="family-takaful-advisory.html">Family Takaful</a></li>
-                    <li><a href="rsp-consultation.html">RSP Consultation</a></li>
-                    <li><a href="resources/">Resources</a></li>
-                    <li><a href="about/">About Me</a></li>
-                    <li><a href="contact/">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
+        <h1>HAIRUL FAMILY TAKAFUL</h1>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#takaful">Family Takaful</a>
+            <a href="#unit-trust">Unit Trust</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
     </header>
 
-    <main>
-        <section id="hero" class="hero-section">
-            <div class="container">
-                <div class="hero-content">
-                    <h1>Your Family's Financial Compass in Kota Tinggi.</h1>
-                    <p class="sub-headline">Guiding Young Muslim Professionals & Families to Shariah-Compliant Prosperity & Protection.</p>
-                    <p>Welcome to <strong>Hairul Family Takaful Kota Tinggi.</strong> I'm Hairul, and I believe every Muslim family deserves true financial security and peace of mind – especially in today's unpredictable landscape. You're building a life, nurturing your loved ones, and seeking to do so with integrity. My purpose is to be your unwavering guide, <strong>empowering you with the clarity and protection</strong> needed to navigate Malaysia's financial world confidently, safe from pitfalls, and always rooted in Shariah principles.</p>
-                    <div class="hero-ctas">
-                        <a href="#" class="btn btn-primary">Chart Your Family's Secure Future</a>
-                        <a href="resources/free-guides-checklists/" class="btn btn-secondary">Download Your Free Guide: Safeguarding Your Family Finances in Malaysia</a>
-                    </div>
-                </div>
-                <div class="hero-image">
-                    <img src="images/sprouting-plant.jpg" alt="A young plant sprouting from soil, symbolizing growth and future.">
-                </div>
-            </div>
-        </section>
+    <!-- ===== HERO (SINEK'S "WHY") ===== -->
+    <section class="hero" id="home">
+        <h2>Ethical Wealth Management for Discerning Muslims</h2>
+        <p>Sharia-compliant solutions tailored to modern Malaysian families—<strong>no riba, no gharar, no compromise</strong>.</p>
+        <a href="#takaful" class="cta-button">Explore Halal Solutions</a>
+    </section>
 
-        <section id="who-we-help" class="section-padded">
-            <div class="container">
-                <h2>For the Families of Kota Tinggi: Your Unique Needs, Understood.</h2>
-                <p>We know what truly matters to you: securing your children's future, ensuring immediate financial support in times of need, investing ethically, and avoiding the scams that sadly impact so many. If you're a young Muslim professional or a growing family seeking honest, Shariah-compliant financial guidance right here in Kota Tinggi – a partner who genuinely understands your aspirations and worries – you've found your compass.</p>
-            </div>
-        </section>
-
-        <section id="core-services" class="section-padded bg-light">
-            <div class="container">
-                <h2>Navigate with Confidence: Your Core Pillars of Protection & Growth</h2>
-                <p>Just as a compass points you True North, we offer clear direction in two essential areas, tailored for your family's lasting peace of mind and ethical prosperity:</p>
-                
-                <div class="services-grid">
-                    <div class="service-card">
-                        <h3>Family Takaful Advisory: Your Shield of Protection</h3>
-                        <h4>Family Takaful: Your Unbreakable Shield, Built on Mutual Support.</h4>
-                        <p>Life's uncertainties can be daunting, but they don't have to break your family's stride. Our Shariah-compliant Family Takaful plans are designed to be your steadfast protector, ensuring income replacement, debt security, medical needs, and a smooth, ethical legacy transfer. It’s more than coverage; it’s a community promise of support that defends your loved ones from unexpected financial shocks.</p>
-                        <a href="family-takaful-advisory/" class="btn btn-service">Secure Your Family's Protection</a>
-                    </div>
-                    
-                    <div class="service-card">
-                        <h3>Shariah-Compliant Regular Savings Plan (RSP): Your Path to Steady Wealth</h3>
-                        <h4>RSP: Grow Your Wealth Consistently, with Purpose and Principles.</h4>
-                        <p>Building significant, ethical wealth is a marathon, not a sprint. With a Shariah-compliant Regular Savings Plan (RSP), you harness the proven power of dollar-cost averaging and compounding. This disciplined approach means you're investing smartly and steadily for your big goals – be it your children's education, a comfortable retirement, or preparing for Hajj. Remember in Kota Tinggi, <em>sikit-sikit, lama-lama jadi bukit</em>!</p>
-                        <a href="shariah-rsp-consulting/" class="btn btn-service">Start Your Ethical Investment Journey</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="why-partner" class="section-padded">
-            <div class="container">
-                <h2>Why Partner with Hairul Family Takaful Kota Tinggi? Your Trust, Our Purpose.</h2>
-                <p>In Malaysia today, with so much financial noise and the heartbreaking rise of scams, knowing who to trust is paramount. My commitment goes beyond just offering services; it is rooted in a profound <strong>WHY</strong>: to empower <em>your</em> family with unwavering trust, genuine understanding, and actionable financial literacy. I am dedicated to being your vigilant partner, providing the honest insights and clear guidance you need to safeguard your hard-earned money and make truly informed decisions.</p>
-                
-                <div class="promise-points">
-                    <div class="promise-item">
-                        <h3>Vigilant Protection & Education</h3>
-                        <p>Helping you spot pitfalls, avoid scams, and build true financial resilience through clear, honest advice.</p>
-                    </div>
-                    <div class="promise-item">
-                        <h3>Local & Relatable</h3>
-                        <p>Right here in Kota Tinggi, understanding <em>your</em> community's unique needs and concerns.</p>
-                    </div>
-                    <div class="promise-item">
-                        <h3>Strictly Shariah-Compliant</h3>
-                        <p>Every solution meticulously vetted to align with Islamic principles.</p>
-                    </div>
-                    <div class="promise-item">
-                        <h3>Personalized, Not Generic</h3>
-                        <p>Your family's unique situation dictates our customized guidance.</p>
-                    </div>
-                    <div class="promise-item">
-                        <h3>Clear & Transparent</h3>
-                        <p>No jargon, just straightforward, honest advice you can understand and trust.</p>
-                    </div>
-                    <div class="promise-item">
-                        <h3>Committed Partnership</h3>
-                        <p>We're with you for the long journey, adapting as your needs evolve.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="call-to-action" class="section-padded bg-dark text-white">
-            <div class="container text-center">
-                <h2>Ready to Chart Your Family's Confident Future?</h2>
-                <p>Don't leave your family's financial journey to chance or confusion. Take the crucial first step towards clarity, security, and a future built on strong foundations. Let's have a simple, no-obligation conversation about where you are and where you want to go. Your compass awaits.</p>
-                <a href="#" class="btn btn-primary btn-large">Book Your Free Discovery Call</a>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Hairul Family Takaful Kota Tinggi. All rights reserved.</p>
-            <ul class="footer-links">
-                <li><a href="privacy-policy.html">Privacy Policy</a></li>
-                <li><a href="terms-of-service.html">Terms of Service</a></li>
-                <li><a href="contact/">Contact Us</a></li>
-            </ul>
+    <!-- ===== SERVICES (OGILVY'S CLARITY) ===== -->
+    <section class="services">
+        <div class="service-card">
+            <i data-feather="shield"></i>
+            <h3>Family Takaful</h3>
+            <p>Protect your loved ones with <strong>interest-free</strong> coverage aligned with Islamic principles.</p>
+            <a href="#takaful" class="cta-button">Learn More</a>
         </div>
+        <div class="service-card">
+            <i data-feather="trending-up"></i>
+            <h3>Unit Trust Savings</h3>
+            <p>Grow wealth responsibly with <strong>Sharia-screened</strong> investment funds.</p>
+            <a href="#unit-trust" class="cta-button">Start Investing</a>
+        </div>
+    </section>
+
+    <!-- ===== TESTIMONIAL (GODIN'S STORYTELLING) ===== -->
+    <section style="text-align: center; padding: 2rem; background: var(--light);">
+        <blockquote style="font-style: italic; max-width: 600px; margin: 0 auto;">
+            "Finally, an advisor who speaks both <strong>finance</strong> and <strong>faith</strong>. My family sleeps better knowing our money is halal."
+            <br><br>
+            <strong>- Aisha, Kuala Lumpur</strong>
+        </blockquote>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <p>© 2024 Hairul Family Takaful Kota Tinggi</p>
+        <small>Sharia-Registered Financial Planner | Member of MFPC & FIMM</small>
+        <p>
+            <a href="https://wa.me/601127657730" style="color: var(--gold);">Chat via WhatsApp</a>
+        </p>
     </footer>
 
-    </body>
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/601127657730" class="whatsapp-float">
+        <i data-feather="message-circle" stroke="white" fill="#25D366"></i>
+    </a>
+
+    <!-- Initialize Feather Icons -->
+    <script>
+        feather.replace();
+    </script>
+</body>
 </html>
