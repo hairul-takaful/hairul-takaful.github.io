@@ -213,3 +213,67 @@ footer a {
     font-size: 1rem;
   }
 }
+
+/* ===== NEW SEO-RELATED STYLES ===== */
+/* Schema.org Microdata (hidden but crawlable) */
+[itemprop][hidden] {
+  display: none;
+  visibility: hidden;
+}
+
+/* Address/Location Styling */
+[itemprop="address"] {
+  font-style: normal;
+  display: inline;
+}
+
+/* Structured Data Review Cards */
+[itemtype="https://schema.org/Review"] {
+  position: relative;
+  padding-left: 2rem;
+}
+[itemtype="https://schema.org/Review"]:before {
+  content: """;
+  position: absolute;
+  left: 0;
+  top: -1rem;
+  font-size: 3rem;
+  color: var(--teal);
+  opacity: 0.2;
+}
+
+/* ===== CRITICAL MOBILE FIXES ===== */
+@media (max-width: 480px) {
+  /* Ensure schema text doesn't break layout */
+  [itemprop="telephone"] {
+    white-space: nowrap;
+  }
+  
+  /* Optimize review display */
+  [itemtype="https://schema.org/Review"] footer {
+    display: block;
+    margin-top: 0.5rem;
+  }
+}
+
+/* ===== VISUAL SEO BOOSTERS ===== */
+/* Highlight local service area */
+[itemprop="addressLocality"] {
+  font-weight: bold;
+  color: var(--teal);
+  text-decoration: underline;
+}
+
+/* Make phone numbers stand out */
+[itemprop="telephone"],
+a[href^="tel:"] {
+  color: var(--navy);
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+/* Schema product cards */
+[itemtype="https://schema.org/FinancialProduct"] {
+  border-left: 3px solid var(--gold);
+  padding-left: 1rem;
+}
