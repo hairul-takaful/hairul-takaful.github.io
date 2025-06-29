@@ -3,6 +3,7 @@
     --primary: #0060df;
     --primary-dark: #003eaa;
     --secondary: #f0f0f4;
+    --accent: #00c8aa;
     --text: #15141a;
     --text-light: #5b5b66;
     --background: #ffffff;
@@ -11,7 +12,7 @@
     --footer-bg: #2b2a33;
     --footer-text: #fbfbfe;
     --shadow: 0 2px 14px rgba(0, 0, 0, 0.1);
-    --radius: 4px;
+    --radius: 8px;
     --transition: all 0.2s ease;
 }
 
@@ -38,6 +39,7 @@ body {
 img {
     max-width: 100%;
     height: auto;
+    border-radius: var(--radius);
 }
 
 /* Typography */
@@ -48,11 +50,13 @@ h1, h2, h3, h4 {
 
 h1 {
     font-size: 2.5rem;
+    margin-bottom: 1.5rem;
 }
 
 h2 {
     font-size: 2rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
 }
 
 h3 {
@@ -68,17 +72,21 @@ p {
 .subtitle {
     font-size: 1.25rem;
     max-width: 600px;
+    margin: 0 auto 2rem;
 }
 
 /* Buttons */
-.primary-button, .secondary-button, .cta-button {
-    display: inline-block;
+.primary-button, .secondary-button, .cta-button, .solution-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     padding: 12px 24px;
     border-radius: var(--radius);
     font-weight: 600;
     text-decoration: none;
     transition: var(--transition);
     text-align: center;
+    gap: 8px;
 }
 
 .primary-button {
@@ -111,6 +119,17 @@ p {
 
 .cta-button:hover {
     background-color: var(--primary-dark);
+}
+
+.solution-button {
+    background-color: white;
+    color: var(--primary);
+    margin-top: 1.5rem;
+    width: 100%;
+}
+
+.solution-button:hover {
+    background-color: var(--secondary);
 }
 
 /* Header */
@@ -188,6 +207,7 @@ p {
 
 .hero-content {
     flex: 1;
+    text-align: center;
 }
 
 .hero-image {
@@ -195,7 +215,6 @@ p {
 }
 
 .hero-image img {
-    border-radius: var(--radius);
     box-shadow: var(--shadow);
 }
 
@@ -203,6 +222,7 @@ p {
     display: flex;
     gap: 16px;
     margin-top: 32px;
+    justify-content: center;
 }
 
 /* Trust Indicators */
@@ -228,89 +248,132 @@ p {
     font-weight: 500;
 }
 
-/* Features Section */
-.features {
+/* Solutions Section */
+.solutions {
     padding: 80px 0;
-    text-align: center;
 }
 
-.features-grid {
+.solution-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 32px;
+    margin-top: 48px;
+}
+
+.solution-card {
+    background-color: var(--card-bg);
+    padding: 32px;
+    border-radius: var(--radius);
+    transition: var(--transition);
+    border-top: 4px solid var(--primary);
+    box-shadow: var(--shadow);
+}
+
+.solution-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.solution-card.family-takaful {
+    border-top-color: var(--primary);
+}
+
+.solution-card.unit-trust {
+    border-top-color: var(--accent);
+}
+
+.solution-card h3 {
+    color: var(--text);
+    margin-bottom: 1.5rem;
+}
+
+.solution-card ul {
+    list-style-position: inside;
+    margin-bottom: 1.5rem;
+}
+
+.solution-card li {
+    margin-bottom: 0.5rem;
+    color: var(--text-light);
+}
+
+/* USP Section */
+.usp {
+    padding: 80px 0;
+    background-color: var(--secondary);
+}
+
+.usp-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 32px;
     margin-top: 48px;
 }
 
-.feature-card {
-    background-color: var(--card-bg);
-    padding: 32px;
-    border-radius: var(--radius);
-    transition: var(--transition);
-}
-
-.feature-card:hover {
-    transform: translateY(-8px);
-    box-shadow: var(--shadow);
-}
-
-.feature-icon {
-    font-size: 2rem;
-    margin-bottom: 16px;
-}
-
-/* Testimonials */
-.testimonials {
-    padding: 80px 0;
-    background-color: var(--secondary);
-}
-
-.testimonial-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 32px;
-    margin-top: 48px;
-}
-
-.testimonial-card {
+.usp-card {
     background-color: var(--background);
     padding: 32px;
     border-radius: var(--radius);
+    text-align: center;
+    transition: var(--transition);
+}
+
+.usp-card:hover {
+    transform: translateY(-5px);
     box-shadow: var(--shadow);
 }
 
-.testimonial-text {
-    font-style: italic;
-    margin-bottom: 16px;
+.usp-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
 }
 
-.testimonial-author {
-    font-weight: 500;
-    color: var(--primary);
-}
-
-/* CTA Section */
-.cta-section {
+/* About & CTA Section */
+.about-cta {
     padding: 80px 0;
-    text-align: center;
+}
+
+.about-cta .wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 48px;
+    align-items: center;
+}
+
+.about-content {
+    max-width: 600px;
+}
+
+.about-content h2 {
+    text-align: left;
+    margin-bottom: 1.5rem;
+}
+
+.cta-card {
     background-color: var(--primary);
     color: white;
+    padding: 32px;
+    border-radius: var(--radius);
+    text-align: center;
 }
 
-.cta-section h2, .cta-section p {
+.cta-card h3 {
     color: white;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-bottom: 1rem;
 }
 
-.cta-section .primary-button {
-    background-color: white;
-    color: var(--primary);
-    margin-top: 24px;
+.cta-card p {
+    color: rgba(255,255,255,0.9);
+    margin-bottom: 1.5rem;
 }
 
-.cta-section .primary-button:hover {
-    background-color: rgba(255, 255, 255, 0.9);
+.cta-card .small-text {
+    font-size: 0.9rem;
+    margin-top: 1rem;
+}
+
+.cta-card a {
+    color: white;
 }
 
 /* Footer */
@@ -399,11 +462,10 @@ p {
 
     .hero-content {
         order: 2;
-        text-align: center;
     }
 
     .hero-cta {
-        justify-content: center;
+        flex-direction: column;
     }
 
     .main-nav {
@@ -417,6 +479,10 @@ p {
     .trust-indicators .wrapper {
         flex-direction: column;
         gap: 32px;
+    }
+
+    .solution-cards {
+        grid-template-columns: 1fr;
     }
 
     .footer-bottom {
@@ -435,11 +501,8 @@ p {
         font-size: 1.5rem;
     }
 
-    .hero-cta {
-        flex-direction: column;
-    }
-
-    .primary-button, .secondary-button {
+    .hero-cta .primary-button, 
+    .hero-cta .secondary-button {
         width: 100%;
     }
 }
