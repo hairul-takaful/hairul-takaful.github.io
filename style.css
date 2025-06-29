@@ -1,7 +1,19 @@
-/* Google Fonts Import */
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+:root {
+    /* Color Scheme */
+    --primary: #6d4aff;
+    --primary-dark: #4a2dcc;
+    --secondary: #2ecc71;
+    --accent: #f39c12;
+    --text: #333333;
+    --text-light: #666666;
+    --background: #ffffff;
+    --card-bg: #f8f9fa;
+    --border: #e0e0e0;
+    --footer-bg: #2c3e50;
+    --footer-text: #ecf0f1;
+}
 
-/* General Resets & Basic Styling */
+/* Base Styles */
 * {
     margin: 0;
     padding: 0;
@@ -9,570 +21,367 @@
 }
 
 body {
-    font-family: 'Noto Sans', sans-serif; /* Changed to Noto Sans */
-    line-height: 1.7; /* Slightly more line-height for readability */
-    color: #4A4A4A; /* Softer dark gray for body text */
-    background-color: #ffffff; /* Pure white background for the whole site */
-}
-
-.container {
-    max-width: 1280px; /* Slightly wider container */
-    margin: 0 auto;
-    padding: 0 40px; /* More generous padding on sides */
-}
-
-/* Typography */
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Noto Sans', sans-serif; /* Changed to Noto Sans */
-    color: #212121; /* Darker, more neutral black for main headings */
-    margin-bottom: 0.8em;
-    line-height: 1.2;
-    font-weight: 700; /* Keep bold for impact */
-}
-
-h1 {
-    font-size: 2.8em; /* Global h1 size - will be overridden by .hero-section .hero-content h1 */
-}
-
-h2 {
-    font-size: 2.5em; /* Slightly larger h2 */
-    font-weight: 600;
-    text-align: center;
-    margin-bottom: 1.5em;
-    color: #212121;
-}
-
-h3 {
-    font-size: 1.8em;
-    font-weight: 600;
-}
-
-p {
-    margin-bottom: 1em;
-}
-
-.sub-headline {
-    font-size: 1.4em;
-    color: #555; /* Softer color for sub-headline */
-    font-weight: 400;
-    margin-bottom: 1.5em;
-}
-
-/* Sections */
-.section-padded {
-    padding: 100px 0; /* More padding for more whitespace */
-}
-
-.bg-light {
-    background-color: #F8F9FA; /* Very light gray */
-}
-
-.bg-dark {
-    background-color: #1A237E; /* Deep indigo/blue for strong contrast sections, like Google's brand secondary */
-    color: #ffffff;
-}
-
-.bg-dark h2, .bg-dark p, .bg-dark .sub-headline {
-    color: #ffffff;
-}
-
-.text-center {
-    text-align: center;
-}
-
-/* Buttons */
-.btn {
-    display: inline-block;
-    padding: 16px 32px; /* Slightly larger buttons */
-    border-radius: 8px; /* More rounded buttons */
-    text-decoration: none;
-    font-weight: 600;
-    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
-    font-size: 1.05em;
-    border: none;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Subtle shadow for buttons */
-}
-
-.btn-primary {
-    background-color: #00897b; /* Keep your primary teal */
-    color: #ffffff;
-}
-
-.btn-primary:hover {
-    background-color: #00695c;
-    transform: translateY(-2px); /* Slight lift on hover */
-    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
-}
-
-.btn-secondary {
-    background-color: transparent;
-    color: #00897b;
-    border: 1px solid #00897b; /* Thinner border */
-    box-shadow: none; /* No shadow by default for secondary */
-}
-
-.btn-secondary:hover {
-    background-color: #00897b;
-    color: #ffffff;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 15px rgba(0,0,0,0.15); /* Add shadow on hover */
-}
-
-.btn-large {
-    padding: 20px 40px; /* Even larger for hero CTAs */
-    font-size: 1.2em;
-}
-
-.btn-service {
-    margin-top: 20px; /* More space */
-    padding: 12px 25px;
-    background-color: #00695c;
-    color: #ffffff;
-    font-size: 1em;
-    border-radius: 5px; /* Slightly less rounded than main buttons */
-    box-shadow: none;
-}
-.btn-service:hover {
-    background-color: #004d40;
-    transform: none; /* No lift for service buttons */
-    box-shadow: none;
-}
-
-/* Header */
-header {
-    background-color: #ffffff;
-    padding: 25px 0; /* More padding */
-    box-shadow: 0 1px 3px rgba(0,0,0,0.06); /* Much lighter shadow */
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-header .logo img {
-    max-height: 55px; /* Slightly larger logo if desired */
-    width: auto;
-}
-
-header nav ul {
-    list-style: none;
-}
-
-header nav ul li {
-    display: inline-block;
-    margin-left: 40px; /* More space between nav items */
-}
-
-header nav ul li a {
-    text-decoration: none;
-    color: #333;
-    font-weight: 500;
-    font-size: 1.1em; /* Slightly larger nav text */
-    transition: color 0.3s ease;
-}
-
-header nav ul li a:hover {
-    color: #00897b;
-}
-
-/* Hero Section Specifics (for Homepage and other hero sections) */
-.hero-section {
-    background-color: #ffffff; /* Pure white hero background */
-    padding: 120px 0; /* More padding */
-    display: flex;
-    align-items: center;
-    min-height: 650px; /* Ensures hero section has a decent height */
-}
-
-.hero-section .container {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 60px; /* More space between content and image */
-}
-
-.hero-section .hero-content {
-    flex: 2;
-    min-width: 300px;
-}
-
-/* FIX: Ensure H1 in hero content is consistently large and impactful */
-.hero-section .hero-content h1 {
-    font-size: 3.8em; /* Even larger for more impact, adjust to your preference */
-    line-height: 1.1;
-    color: #212121; /* Stronger contrast */
-}
-
-.hero-section .hero-image {
-    flex: 1;
-    min-width: 250px;
-    text-align: center;
-}
-
-.hero-section .hero-image img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 12px; /* Slightly more rounded corners */
-    box-shadow: 0 8px 25px rgba(0,0,0,0.1); /* Lighter but broader shadow */
-}
-
-.hero-ctas {
-    margin-top: 40px; /* More space */
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px; /* More consistent gap */
-    justify-content: flex-start;
-}
-
-/* Services Grid (Homepage) */
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 40px; /* More space between cards */
-    margin-top: 60px; /* More space from heading */
-}
-
-.service-card {
-    background-color: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.08); /* Lighter, more subtle shadow */
-    padding: 35px; /* More padding inside cards */
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.service-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
-}
-
-.service-card h3 {
-    color: #00695c;
-    margin-bottom: 12px;
-}
-
-.service-card h4 {
-    font-size: 1.1em;
-    color: #555;
-    margin-bottom: 20px; /* More space before button */
-}
-
-/* Promise Points Grid (Homepage) */
-.promise-points {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px; /* More space */
-    margin-top: 60px; /* More space from heading */
-}
-
-.promise-item {
-    background-color: #ffffff;
-    border-left: 5px solid #00897b; /* Slightly thicker accent border */
-    border-radius: 8px; /* Slightly more rounded */
-    box-shadow: 0 4px 15px rgba(0,0,0,0.06); /* Lighter shadow */
-    padding: 30px; /* More padding */
-}
-
-.promise-item h3 {
-    color: #00695c;
-    font-size: 1.3em; /* Slightly larger heading */
-    margin-bottom: 10px;
-}
-
-/* --- NEW STYLES FOR FAMILY TAKAFUL ADVISORY PAGE --- */
-
-/* General grid styling for benefits and approach sections */
-.benefits-grid,
-.approach-points {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 40px; /* More space */
-    margin-top: 60px;
-    text-align: left;
-}
-
-.benefit-item,
-.approach-item {
-    background-color: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-    padding: 35px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-}
-
-.benefit-item:hover,
-.approach-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
-}
-
-.benefit-item h3,
-.approach-item h3 {
-    color: #00695c;
-    margin-bottom: 12px;
-    font-size: 1.4em; /* Slightly larger heading */
-}
-
-/* FAQ Styling */
-.faq-items {
-    margin-top: 40px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px; /* More space between FAQ items */
-}
-
-.faq-item {
-    background-color: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.06);
-    padding: 25px; /* More padding */
-    border-left: 6px solid #00897b; /* Slightly thicker accent border */
-}
-
-.faq-item summary {
-    font-weight: 600;
-    color: #212121; /* Darker question text */
-    cursor: pointer;
-    padding: 5px 0;
-    list-style: none;
-    position: relative;
-    font-size: 1.1em; /* Slightly larger question */
-}
-
-.faq-item summary::-webkit-details-marker {
-    display: none;
-}
-
-.faq-item summary::after {
-    content: '+';
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 1.6em; /* Slightly larger icon */
-    color: #00897b;
-    transition: transform 0.2s ease;
-}
-
-.faq-item[open] summary::after {
-    content: '-';
-    transform: translateY(-50%) rotate(0deg);
-}
-
-.faq-item p {
-    margin-top: 18px; /* More space after question */
-    margin-bottom: 0;
-    line-height: 1.8;
-    color: #555;
-}
-
-/* Testimonials Styling (Simple Stack) */
-.testimonials-carousel {
-    display: flex;
-    flex-direction: column;
-    gap: 40px; /* More space */
-    margin-top: 60px;
-}
-
-.testimonial-item {
-    background-color: rgba(255, 255, 255, 0.15); /* Slightly less transparent white on dark background */
-    border-radius: 12px;
-    padding: 40px; /* More padding */
-    text-align: center;
-}
-
-.testimonial-item .quote {
-    font-size: 1.4em; /* Slightly larger quote */
-    font-style: italic;
-    margin-bottom: 20px;
-    color: #ffffff;
+    font-family: 'Inter', sans-serif;
+    color: var(--text);
+    background-color: var(--background);
     line-height: 1.6;
 }
 
-.testimonial-item .source {
-    font-weight: 600;
-    color: #e0f2f1;
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-/* Final CTA Buttons Section */
-.cta-buttons {
-    margin-top: 40px; /* More space */
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px; /* More consistent gap */
-    justify-content: center;
-}
-
-
-/* Footer */
-footer {
-    background-color: #212121; /* Darker footer */
-    color: #f4f4f4;
-    padding: 50px 0; /* More padding */
+/* Header Styles */
+header {
+    background-color: var(--primary);
+    color: white;
+    padding: 4rem 0;
     text-align: center;
-    font-size: 0.95em;
 }
 
-footer .footer-links {
-    list-style: none;
-    padding: 0;
-    margin-top: 20px; /* More space */
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    line-height: 1.3;
 }
 
-footer .footer-links li {
-    display: inline-block;
-    margin: 0 20px; /* More space */
+header .subtitle {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    max-width: 700px;
+    margin: 0 auto;
 }
 
-footer .footer-links li a {
-    color: #f4f4f4;
+/* Navigation */
+nav {
+    background-color: var(--background);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav .container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: var(--text);
     text-decoration: none;
-    transition: color 0.3s ease;
+    padding: 1.2rem 1.5rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
 }
 
-footer .footer-links li a:hover {
-    color: #00897b;
+nav a i {
+    margin-right: 8px;
+    font-size: 1rem;
+}
+
+nav a:hover, nav a.active {
+    color: var(--primary);
+}
+
+nav a:hover {
+    background-color: rgba(109, 74, 255, 0.05);
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    padding: 4rem 0;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.hero-content h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary);
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    color: var(--text-light);
+}
+
+.hero-image {
+    flex: 1;
+}
+
+.image-placeholder {
+    background-color: #e0e0e0;
+    border-radius: 12px;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-light);
+}
+
+/* Services Section */
+.services {
+    padding: 4rem 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    color: var(--primary);
+}
+
+.card-group {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.card i {
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.card p {
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+}
+
+/* Why Choose Us Section */
+.why-choose-us {
+    padding: 4rem 0;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.feature {
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.feature:hover {
+    background-color: var(--primary);
+    color: white;
+}
+
+.feature:hover i, .feature:hover h3, .feature:hover p {
+    color: white;
+}
+
+.feature i {
+    font-size: 2rem;
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+.feature h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.feature p {
+    color: var(--text-light);
+}
+
+/* Button Styles */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn i {
+    margin-right: 8px;
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-dark);
+}
+
+.btn-secondary {
+    background-color: var(--secondary);
+    color: white;
+}
+
+.btn-secondary:hover {
+    opacity: 0.9;
+}
+
+.btn-outline {
+    background-color: transparent;
+    border: 2px solid var(--primary);
+    color: var(--primary);
+}
+
+.btn-outline:hover {
+    background-color: var(--primary);
+    color: white;
+}
+
+.cta-group {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+/* Footer Styles */
+footer {
+    background-color: var(--footer-bg);
+    color: var(--footer-text);
+    padding: 4rem 0 0;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.footer-section h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+    color: white;
+}
+
+.footer-section p, .footer-section li {
+    margin-bottom: 1rem;
+    opacity: 0.8;
+}
+
+.footer-section a {
+    color: var(--footer-text);
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+.footer-section a:hover {
+    opacity: 0.8;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 1.2rem;
+    transition: opacity 0.3s ease;
+}
+
+.social-icons a:hover {
+    opacity: 0.8;
 }
 
 /* Responsive Design */
-@media (max-width: 992px) {
-    .container {
-        padding: 0 30px; /* Adjusted container padding */
-    }
-    h1 {
-        font-size: 2.8em; /* Default h1 for smaller screens */
-    }
-    h2 {
-        font-size: 2em;
-    }
-    .sub-headline {
-        font-size: 1.2em;
-    }
-    .section-padded {
-        padding: 80px 0;
-    }
-    .hero-section {
-        padding: 100px 0;
-        min-height: 550px;
-    }
-    .hero-section .container {
-        flex-direction: column;
-        text-align: center;
-        gap: 40px;
-    }
-    .hero-section .hero-image {
-        order: -1;
-        margin-bottom: 0; /* Removed extra margin */
-    }
-    .hero-section .hero-content h1 {
-        font-size: 2.8em; /* Match general h1 for smaller screens */
-    }
-    .hero-ctas {
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-    }
-    header nav ul li {
-        margin-left: 20px;
-    }
-}
-
 @media (max-width: 768px) {
-    header .container {
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    header .subtitle {
+        font-size: 1rem;
+    }
+    
+    nav a {
+        padding: 1rem;
+        font-size: 0.9rem;
+    }
+    
+    .hero {
         flex-direction: column;
         text-align: center;
+        padding: 3rem 0;
     }
-    header nav ul {
-        margin-top: 15px;
+    
+    .hero-image {
+        order: -1;
+        margin-bottom: 2rem;
     }
-    header nav ul li {
-        margin: 0 10px;
+    
+    .image-placeholder {
+        height: 250px;
     }
-    h1 {
-        font-size: 2.2em;
+    
+    .cta-group {
+        justify-content: center;
     }
-    h2 {
-        font-size: 1.8em;
-    }
-    .sub-headline {
-        font-size: 1.2em;
-    }
-    .section-padded {
-        padding: 60px 0;
-    }
-    .hero-section {
-        min-height: 450px;
-        padding: 80px 0;
-    }
-    .hero-section .hero-content h1 {
-        font-size: 2.2em; /* Even smaller for very small screens */
-    }
-    .services-grid,
-    .promise-points,
-    .benefits-grid,
-    .approach-points {
-        grid-template-columns: 1fr; /* Single column layout for all grids */
-        gap: 30px;
-        margin-top: 40px;
-    }
-
-    .service-card,
-    .promise-item,
-    .benefit-item,
-    .approach-item,
-    .faq-item,
-    .testimonial-item {
-        padding: 25px; /* Consistent padding for cards on mobile */
-    }
-
-    .faq-item summary {
-        font-size: 1em;
-    }
-
-    .faq-item p {
-        font-size: 0.95em;
-    }
-
-    .testimonial-item .quote {
-        font-size: 1.2em;
-    }
-
-    .cta-buttons {
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
+    
+    .features, .footer-content {
+        grid-template-columns: 1fr;
     }
 }
 
 @media (max-width: 480px) {
-    .container {
-        padding: 0 20px;
+    .cta-group {
+        flex-direction: column;
     }
-    .btn {
-        width: 100%;
-    }
-    h1 {
-        font-size: 1.8em;
-    }
-    h2 {
-        font-size: 1.5em;
-    }
-    .sub-headline {
-        font-size: 1.1em;
-    }
-    .hero-section .hero-content h1 {
-        font-size: 1.8em;
+    
+    .footer-bottom {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
     }
 }
